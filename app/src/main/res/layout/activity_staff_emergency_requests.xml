@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical">
+
+    <!-- HEADER -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="18dp"
+        android:paddingTop="26dp"
+        android:paddingEnd="18dp"
+        android:paddingBottom="14dp">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/btnBack"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            app:cardBackgroundColor="#FFFFFF"
+            app:cardCornerRadius="21dp"
+            app:cardElevation="0dp"
+            app:strokeColor="#E8E8E8"
+            app:strokeWidth="1dp">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:contentDescription="Back"
+                android:src="@drawable/ic_staff_back"
+                app:tint="#222222" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="13dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Emergency Requests"
+                android:textColor="#111111"
+                android:textSize="21sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtRequestSummary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="Loading hospital requests..."
+                android:textColor="#888888"
+                android:textSize="10sp" />
+
+        </LinearLayout>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/btnRefresh"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            app:cardBackgroundColor="#FFF1F3"
+            app:cardCornerRadius="21dp"
+            app:cardElevation="0dp">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:contentDescription="Refresh"
+                android:src="@drawable/ic_staff_refresh"
+                app:tint="#EF2637" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+
+    <!-- FILTERS -->
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:fillViewport="false"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingStart="18dp"
+            android:paddingTop="8dp"
+            android:paddingEnd="18dp"
+            android:paddingBottom="14dp">
+
+            <TextView
+                android:id="@+id/filterAll"
+                android:layout_width="wrap_content"
+                android:layout_height="38dp"
+                android:background="@drawable/bg_staff_filter_selected"
+                android:gravity="center"
+                android:minWidth="62dp"
+                android:paddingStart="18dp"
+                android:paddingEnd="18dp"
+                android:text="All"
+                android:textColor="#FFFFFF"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/filterPending"
+                android:layout_width="wrap_content"
+                android:layout_height="38dp"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/bg_staff_filter"
+                android:gravity="center"
+                android:minWidth="82dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:text="Pending"
+                android:textColor="#666666"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/filterVerified"
+                android:layout_width="wrap_content"
+                android:layout_height="38dp"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/bg_staff_filter"
+                android:gravity="center"
+                android:minWidth="82dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:text="Verified"
+                android:textColor="#666666"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/filterMatching"
+                android:layout_width="wrap_content"
+                android:layout_height="38dp"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/bg_staff_filter"
+                android:gravity="center"
+                android:minWidth="85dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:text="Matching"
+                android:textColor="#666666"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/filterFulfilled"
+                android:layout_width="wrap_content"
+                android:layout_height="38dp"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/bg_staff_filter"
+                android:gravity="center"
+                android:minWidth="85dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:text="Fulfilled"
+                android:textColor="#666666"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/filterRejected"
+                android:layout_width="wrap_content"
+                android:layout_height="38dp"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/bg_staff_filter"
+                android:gravity="center"
+                android:minWidth="82dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:text="Rejected"
+                android:textColor="#666666"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+    <!-- REQUEST LIST -->
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerStaffEmergencyRequests"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:paddingStart="18dp"
+            android:paddingEnd="18dp"
+            android:paddingBottom="30dp"
+            android:scrollbars="none" />
+
+        <TextView
+            android:id="@+id/txtEmptyRequests"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:padding="30dp"
+            android:text="No emergency requests found"
+            android:textColor="#888888"
+            android:textSize="13sp"
+            android:visibility="gone" />
+
+    </FrameLayout>
+
+</LinearLayout>
