@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    app:cardBackgroundColor="#FFFFFF"
+    app:cardCornerRadius="14dp"
+    app:cardElevation="0dp"
+    app:strokeColor="#E5E5E5"
+    app:strokeWidth="1dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="14dp">
+
+        <!-- ========================= -->
+        <!-- HOSPITAL HEADER -->
+        <!-- ========================= -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <!-- HOSPITAL ICON -->
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                app:cardBackgroundColor="#FFF1F2"
+                app:cardCornerRadius="11dp"
+                app:cardElevation="0dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="✚"
+                    android:textColor="#EF2637"
+                    android:textSize="19sp"
+                    android:textStyle="bold" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <!-- HOSPITAL NAME -->
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="11dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtBankName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="National Blood Bank"
+                    android:textColor="#111111"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtLocation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:text="Colombo • 2.4 km"
+                    android:textColor="#777777"
+                    android:textSize="10sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <!-- ========================= -->
+        <!-- BLOOD STOCK -->
+        <!-- ========================= -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:background="#FFF7F7"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Blood Availability"
+                android:textColor="#777777"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/txtStock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Blood Stock: High"
+                android:textColor="#16A34A"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+
+        <!-- ========================= -->
+        <!-- DONOR NEED -->
+        <!-- ========================= -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:background="#FFF7F7"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Current Donor Need"
+                android:textColor="#777777"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/txtDonorNeed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Donor Need: Urgent"
+                android:textColor="#EF2637"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+
+        <!-- ========================= -->
+        <!-- BLOOD GROUPS NEEDED -->
+        <!-- ========================= -->
+
+        <TextView
+            android:id="@+id/txtNeededGroups"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Blood Needed: O+, A-, B-"
+            android:textColor="#111111"
+            android:textSize="11sp"
+            android:textStyle="bold" />
+
+
+        <!-- ========================= -->
+        <!-- DONATION STATUS -->
+        <!-- ========================= -->
+
+        <TextView
+            android:id="@+id/txtDonationStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="● Accepting donors now"
+            android:textColor="#16A34A"
+            android:textSize="10sp"
+            android:textStyle="bold" />
+
+
+        <!-- ========================= -->
+        <!-- BUTTONS -->
+        <!-- ========================= -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:orientation="horizontal">
+
+            <!-- NEED BLOOD -->
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnNeedBlood"
+                android:layout_width="0dp"
+                android:layout_height="46dp"
+                android:layout_marginEnd="4dp"
+                android:layout_weight="1"
+                android:text="Need Blood"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                app:backgroundTint="#EF2637"
+                app:cornerRadius="10dp" />
+
+
+            <!-- DONATE -->
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnDonate"
+                android:layout_width="0dp"
+                android:layout_height="46dp"
+                android:layout_marginStart="4dp"
+                android:layout_weight="1"
+                android:text="Donate Blood"
+                android:textAllCaps="false"
+                android:textColor="#EF2637"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                app:backgroundTint="#FFF1F2"
+                app:cornerRadius="10dp"
+                app:strokeColor="#FFD9DD"
+                app:strokeWidth="1dp" />
+
+        </LinearLayout>
+
+
+        <!-- ========================= -->
+        <!-- VIEW DETAILS -->
+        <!-- ========================= -->
+
+        <TextView
+            android:id="@+id/btnViewDetails"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="4dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="View Details"
+            android:textColor="#EF2637"
+            android:textSize="11sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>
