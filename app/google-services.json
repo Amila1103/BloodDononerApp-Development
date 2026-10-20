@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "756024095616",
+    "project_id": "blooddonorapp-new",
+    "storage_bucket": "blooddonorapp-new.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:756024095616:android:78b281ee7075824f854765",
+        "android_client_info": {
+          "package_name": "com.example.blooddononerapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "756024095616-pi3qd9pa4qkld7tjt112rn2accvtk717.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.blooddononerapp",
+            "certificate_hash": "4bb3d9631640d5f501698b149df291f84b4a9306"
+          }
+        },
+        {
+          "client_id": "756024095616-n9bhjubo7dspecnu8vsjpis072gp0d2c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCsqVgOE5qK2FKB2Gi-vZ9TDm3er7UYYSs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "756024095616-n9bhjubo7dspecnu8vsjpis072gp0d2c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

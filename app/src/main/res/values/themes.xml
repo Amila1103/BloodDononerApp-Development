@@ -1,0 +1,113 @@
+
+<resources>
+
+    <!-- Main application theme -->
+    <style
+        name="Theme.BloodDononerApp"
+        parent="Theme.MaterialComponents.DayNight.NoActionBar">
+
+        <item name="colorPrimary">@color/blood_red</item>
+        <item name="colorPrimaryVariant">@color/blood_red_dark</item>
+        <item name="colorOnPrimary">@color/background_white</item>
+
+        <item name="colorSecondary">@color/blood_red</item>
+        <item name="colorOnSecondary">@color/background_white</item>
+
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:statusBarColor">@color/background_white</item>
+        <item name="android:navigationBarColor">@color/background_white</item>
+        <item name="android:colorAccent">@color/blood_red</item>
+
+    </style>
+
+    <!-- Admin-only theme -->
+    <style
+        name="Theme.BloodDononerApp.Admin"
+        parent="Theme.BloodDononerApp">
+
+        <item name="alertDialogTheme">
+            @style/ThemeOverlay.BloodDononerApp.AdminDialog
+        </item>
+
+    </style>
+
+    <!-- Shared Admin confirmation dialog design -->
+    <style
+        name="ThemeOverlay.BloodDononerApp.AdminDialog"
+        parent="ThemeOverlay.AppCompat.Dialog.Alert">
+
+        <item name="android:windowBackground">
+            @drawable/bg_admin_dialog
+        </item>
+
+        <item name="android:windowMinWidthMajor">88%</item>
+        <item name="android:windowMinWidthMinor">88%</item>
+        <item name="android:backgroundDimAmount">0.42</item>
+
+        <item name="colorAccent">@color/blood_red</item>
+        <item name="android:colorAccent">@color/blood_red</item>
+        <item name="colorPrimary">@color/blood_red</item>
+
+        <item name="android:textColorPrimary">
+            @color/text_primary
+        </item>
+
+        <item name="android:textColorSecondary">
+            @color/text_secondary
+        </item>
+
+        <item name="buttonBarPositiveButtonStyle">
+            @style/Widget.BloodDononerApp.AdminDialogPositiveButton
+        </item>
+
+        <item name="buttonBarNegativeButtonStyle">
+            @style/Widget.BloodDononerApp.AdminDialogNegativeButton
+        </item>
+
+        <item name="buttonBarNeutralButtonStyle">
+            @style/Widget.BloodDononerApp.AdminDialogNeutralButton
+        </item>
+
+    </style>
+
+    <!-- Confirm / Continue / Yes -->
+    <style
+        name="Widget.BloodDononerApp.AdminDialogPositiveButton"
+        parent="Widget.AppCompat.Button.ButtonBar.AlertDialog">
+
+        <item name="android:textColor">@color/blood_red</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:minHeight">48dp</item>
+
+    </style>
+
+    <!-- Cancel / No -->
+    <style
+        name="Widget.BloodDononerApp.AdminDialogNegativeButton"
+        parent="Widget.AppCompat.Button.ButtonBar.AlertDialog">
+
+        <item name="android:textColor">@color/text_secondary</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:minHeight">48dp</item>
+
+    </style>
+
+    <!-- Neutral actions -->
+    <style
+        name="Widget.BloodDononerApp.AdminDialogNeutralButton"
+        parent="Widget.AppCompat.Button.ButtonBar.AlertDialog">
+
+        <item name="android:textColor">@color/blood_red_dark</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:minHeight">48dp</item>
+
+    </style>
+
+    <!-- Existing circular profile image style -->
+    <style name="ProfileImageShape">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+</resources>
