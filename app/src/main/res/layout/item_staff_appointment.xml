@@ -1,0 +1,128 @@
+
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    android:clickable="true"
+    android:focusable="true"
+    app:cardBackgroundColor="#FFFFFF"
+    app:cardCornerRadius="18dp"
+    app:cardElevation="0dp"
+    app:strokeColor="#EAEAEA"
+    app:strokeWidth="1dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- DONOR DETAILS -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txtBloodGroup"
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:background="@drawable/bg_staff_blood_circle"
+                android:gravity="center"
+                android:text="A+"
+                android:textColor="#EF2637"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtDonorName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="2"
+                    android:text="Donor Name"
+                    android:textColor="#202126"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtDonorId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Donor ID"
+                    android:textColor="#898C96"
+                    android:textSize="10sp" />
+
+            </LinearLayout>
+
+            <!-- STATUS -->
+            <TextView
+                android:id="@+id/txtStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:background="@drawable/bg_staff_filter"
+                android:gravity="center"
+                android:minWidth="70dp"
+                android:paddingStart="9dp"
+                android:paddingEnd="9dp"
+                android:text="Pending"
+                android:textColor="#C56B15"
+                android:textSize="10sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <!-- DIVIDER -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="13dp"
+            android:background="#F0F0F2" />
+
+        <!-- DATE AND TIME -->
+        <TextView
+            android:id="@+id/txtDateTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Appointment Date and Time"
+            android:textColor="#434650"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <!-- HOSPITAL -->
+        <TextView
+            android:id="@+id/txtHospital"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:text="Hospital Name"
+            android:textColor="#797D86"
+            android:textSize="11sp" />
+
+        <!-- DYNAMIC ACTION -->
+        <TextView
+            android:id="@+id/txtCardAction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:gravity="center_vertical"
+            android:minHeight="40dp"
+            android:text="View appointment details  ›"
+            android:textColor="#EF2637"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>
