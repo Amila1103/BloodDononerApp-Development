@@ -1,0 +1,90 @@
+
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="#FFFFFF"
+    app:cardCornerRadius="24dp"
+    app:cardElevation="0dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- Success / Error / Logout icon -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/dialogIconCard"
+            android:layout_width="62dp"
+            android:layout_height="62dp"
+            app:cardBackgroundColor="#EF2637"
+            app:cardCornerRadius="31dp"
+            app:cardElevation="0dp">
+
+            <TextView
+                android:id="@+id/txtDialogSymbol"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="!"
+                android:textColor="#FFFFFF"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Dialog title -->
+        <TextView
+            android:id="@+id/txtDialogTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:gravity="center"
+            android:text="Confirmation"
+            android:textColor="#202126"
+            android:textSize="19sp"
+            android:textStyle="bold" />
+
+        <!-- Dialog message -->
+        <TextView
+            android:id="@+id/txtDialogMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:lineSpacingExtra="3dp"
+            android:text="Message"
+            android:textColor="#777A82"
+            android:textSize="13sp" />
+
+        <!-- Main action -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnDialogPositive"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="24dp"
+            android:text="Continue"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            app:backgroundTint="#EF2637"
+            app:cornerRadius="14dp" />
+
+        <!-- Cancel / secondary action -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnDialogNegative"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="6dp"
+            android:text="Cancel"
+            android:textAllCaps="false"
+            android:textColor="#71737B"
+            android:visibility="gone"
+            app:backgroundTint="#F5F6F8"
+            app:cornerRadius="14dp"
+            app:strokeWidth="0dp" />
+
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>
