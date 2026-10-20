@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+
+    <!-- ===================================================== -->
+    <!-- HEADER -->
+    <!-- ===================================================== -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/btnBack"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:gravity="center"
+            android:text="‹"
+            android:textColor="#222222"
+            android:textSize="30sp" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Emergency Requests"
+                android:textColor="#111111"
+                android:textSize="21sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="System-wide request monitoring"
+                android:textColor="#888888"
+                android:textSize="10sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <!-- ===================================================== -->
+    <!-- FILTERS -->
+    <!-- ===================================================== -->
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/filterAll"
+                android:layout_width="wrap_content"
+                android:layout_height="38dp"
+                android:background="@drawable/bg_staff_filter_selected"
+                android:gravity="center"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:text="All"
+                android:textColor="#FFFFFF"
+                android:textSize="10sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/filterPending"
+                android:layout_width="wrap_content"
+                android:layout_height="38dp"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/bg_staff_filter"
+                android:gravity="center"
+                android:paddingStart="18dp"
+                android:paddingEnd="18dp"
+                android:text="Pending"
+                android:textColor="#666666"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/filterMatching"
+                android:layout_width="wrap_content"
+                android:layout_height="38dp"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/bg_staff_filter"
+                android:gravity="center"
+                android:paddingStart="18dp"
+                android:paddingEnd="18dp"
+                android:text="Matching"
+                android:textColor="#666666"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/filterFulfilled"
+                android:layout_width="wrap_content"
+                android:layout_height="38dp"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/bg_staff_filter"
+                android:gravity="center"
+                android:paddingStart="18dp"
+                android:paddingEnd="18dp"
+                android:text="Fulfilled"
+                android:textColor="#666666"
+                android:textSize="10sp" />
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+
+    <!-- ===================================================== -->
+    <!-- DYNAMIC REQUEST LIST -->
+    <!-- ===================================================== -->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerEmergencyRequests"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:paddingBottom="20dp"
+        android:scrollbars="vertical" />
+
+</LinearLayout>
